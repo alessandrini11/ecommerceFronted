@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Pinterest, Twitter } from "@material-ui/icons"
+import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter } from "@material-ui/icons"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -52,7 +52,16 @@ const List = styled.ul`
 `
 
 const ListItem = styled.li`
-    width: 50%
+    width: 50%;
+    margin-bottom: 10px,
+`
+const ContactItem = styled.div`
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+`
+const Payment = styled.img`
+    width: 100%
 `
 
 const Footer = () => {
@@ -95,7 +104,22 @@ const Footer = () => {
                     <ListItem>Term</ListItem>
                 </List>
             </Center>
-            <Right>right</Right>
+            <Right>
+                <Title>Contact</Title>
+                <ContactItem>
+                    <Room style={{marginRight: "10px"}}></Room>
+                    Akwa 2 églises, Rue 253 Dr Jamot
+                </ContactItem>
+                <ContactItem>
+                    <Phone style={{marginRight: "10px"}}></Phone>
+                    +237 695254870
+                </ContactItem>
+                <ContactItem>
+                    <Mail style={{marginRight: "10px"}}></Mail>
+                    alexandreschuame@gmail.com
+                </ContactItem>
+                <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"></Payment>
+            </Right>
         </Container>
     )
 }
